@@ -1,0 +1,14 @@
+canvas {
+    background: #eee;
+    display: block;
+    margin: 0 auto;
+}
+#Intro {
+    color: red;
+    background: black;
+}
+body {
+    background-image: url(../assets/photos/images.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
