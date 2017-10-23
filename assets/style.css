@@ -3,9 +3,9 @@ canvas {
     display: block;
     margin: 0 auto;
 }
-#Intro {
-    color: red;
-    background: black;
+#title {
+    color: black;
+    background-color: rgb(0, 119, 255);
 }
 body {
     background-image: url(../assets/photos/images.jpg);
