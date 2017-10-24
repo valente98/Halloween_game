@@ -12,3 +12,14 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+table,
+td {
+    border: 1px solid orange;
+    width: 500px;
+    height: 150px;
+}
+
+.blue {
+    background-color: blue;
+}
