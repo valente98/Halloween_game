@@ -1,27 +1,23 @@
 const $ = require('jquery');
-const appRoot = $('#app');
+function generateGrid(rows, cols) {
+    var grid = '<table>';
+    for (row = 1; row <= rows; row++) {
+        grid += '<tr>';
+        for (col = 1; col <= cols; col++) {
+            grid += '<td></td>';
+        }
+        grid += '</tr>';
+    }
+    return grid;
+}
+function main() {
+    $('#tableContainer').append(generateGrid(4, 4));
 
-dx = 4;
-dy = 4;
-function box{ 
-for (y = 0; y < 4; y++) {
-    $('#boxes').html('<tr id="box">');
-    for (x = 0; x < 4; x++) {
-        $('#box').html('<td><tt><input type=button value="   " ');
-        $('#box').html('onclick="move(' + x + ',' + y + ');"></tt></td>');
-    }
-    $('#boxes').html('</tr>');
+    $('td').click(function() {
+        var index = $('td').index(this);
+        var row = Math.floor(index / 5) + 1;
+        var col = index % 5 + 1;
+        $(this).css('background-color', 'red');
+    });
 }
-}
-function move(x, y) {
-    ax = Math.abs(bx - x);
-    ay = Math.abs(by - y);
-    if (ax * ay == 0 && ax + ay == 1) {
-        f = $('#boxes').pad;
-        f.elements[4 * by + bx].value = f.elements[4 * y + x].value;
-        f.elements[4 * y + x].value = '   ';
-        bx = x;
-        by = y;
-        f.msg.value++;
-    }
-}
+$(main);
