@@ -1,23 +1,20 @@
-const $ = require('jquery');
-function generateGrid(rows, cols) {
-    var grid = '<table>';
-    for (row = 1; row <= rows; row++) {
-        grid += '<tr>';
-        for (col = 1; col <= cols; col++) {
-            grid += '<td></td>';
-        }
-        grid += '</tr>';
-    }
-    return grid;
-}
-function main() {
-    $('#tableContainer').append(generateGrid(4, 4));
+// function maketableclickable(){
 
-    $('td').click(function() {
-        var index = $('td').index(this);
-        var row = Math.floor(index / 5) + 1;
-        var col = index % 5 + 1;
-        $(this).css('background-color', 'red');
-    });
+// }
+
+function turnblue(td) {
+    $(td).addClass('blue');
 }
-$(main);
+
+function move(x, y) {
+    ax = Math.abs(4 - x);
+    ay = Math.abs(4 - y);
+    if (ax * ay == 0 && ax + ay == 1) {
+        f = document.pad;
+        f.elements[4 * by + bx].value = f.elements[4 * y + x].value;
+        f.elements[4 * y + x].value = '   ';
+        bx = x;
+        by = y;
+        f.msg.value++;
+    }
+}
