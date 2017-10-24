@@ -7,10 +7,22 @@ function turnblue(td) {
 }
 function addLetters() {
     var grid = [
-        [null, 'H', 'A', 'P'],
-        ['P', 'Y', 'H', 'A'],
-        ['L', 'L', 'O', 'W'],
-        ['E', 'E', 'N', '!']
+        '',
+        'H',
+        'A',
+        'P',
+        'P',
+        'Y',
+        'H',
+        'A',
+        'L',
+        'L',
+        'O',
+        'W',
+        'E',
+        'E',
+        'N',
+        '!'
     ];
     return grid;
 }
@@ -31,7 +43,14 @@ function shuffle(array) {
 
 function displayLetters() {
     var arr = shuffle(addLetters());
-    $('#letter').append(arr);
+    var td = $('td');
+    var c = 0;
+    td.each(function() {
+        $(this).html('<h1>' + arr[c] + '</h1>');
+        c++;
+    });
 }
 
-function swap(td) {}
+function swap(x, y) {}
+
+displayLetters();
