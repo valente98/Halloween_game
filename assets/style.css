@@ -48,3 +48,11 @@ h1 {
     font-size: 2vh;
     color: black;
 }
+#won {
+    border: 1px solid red;
+    background-color: orange;
+    width: 100px;
+    height: 75px;
+    font-size: 4vh;
+    color: black;
+}
