@@ -1,15 +1,9 @@
-// function maketableclickable(){
-
-// }
 function makeBoard() {
     return shuffle(addLetters());
 }
 
 var LETTERS = makeBoard().slice();
 
-function turnblue(td) {
-    $(td).addClass('blue');
-}
 function addLetters() {
     var grid = [
         '',
