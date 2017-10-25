@@ -40,3 +40,11 @@ h1 {
     width: 75px;
     font-size: 12px;
 }
+#count {
+    border: 1px solid red;
+    background-color: orange;
+    width: 100px;
+    height: 50px;
+    font-size: 2vh;
+    color: black;
+}
