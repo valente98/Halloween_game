@@ -55,8 +55,8 @@ function displayLetters() {
         $('#count').html('<h3> Moves: ' + count + '</h3');
     });
     if (LETTERS.join('') == 'HAPPYHALLOWEEN!') {
-        $('table').html(
-            '<h1>YOU WIN!!</h1><br><center><div><button class="btn" onclick="document.location.reload()">Play Again</button></center></div>'
+        $('#end-game').html(
+            '<h1 id="won">YOU WIN!!</h1><br><center><div><button class="btn" onclick="document.location.reload()">Play Again</button></center></div>'
         );
     }
 }
