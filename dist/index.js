@@ -1,6 +1,11 @@
 // function maketableclickable(){
 
 // }
+function makeBoard() {
+    return shuffle(addLetters());
+}
+
+var LETTERS = makeBoard().slice();
 
 function turnblue(td) {
     $(td).addClass('blue');
@@ -42,15 +47,26 @@ function shuffle(array) {
 }
 
 function displayLetters() {
-    var arr = shuffle(addLetters());
     var td = $('td');
     var c = 0;
     td.each(function() {
-        $(this).html('<h1>' + arr[c] + '</h1>');
+        $(this).html('<h1>' + LETTERS[c] + '</h1>');
         c++;
     });
+    if (LETTERS.join('') == 'HAPPYHALLOWEEN!') {
+        $('table').html(
+            '<h1>YOU WIN!!</h1><br><center><div><button class="btn" onclick="document.location.reload()">Play Again</button></center></div>'
+        );
+    }
 }
 
-function swap(x, y) {}
-
-displayLetters();
+function swap(x, arr) {
+    arr.forEach(function(i) {
+        if (LETTERS[i] == '') {
+            LETTERS[i] = LETTERS[x];
+            LETTERS[x] = '';
+            displayLetters();
+            return '';
+        }
+    });
+}
