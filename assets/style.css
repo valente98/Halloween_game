@@ -56,3 +56,11 @@ h1 {
     font-size: 4vh;
     color: black;
 }
+p {
+    border: 1px solid red;
+    background-color: orange;
+    width: 400px;
+    height: 40px;
+    font-size: 2vh;
+    color: black;
+}
