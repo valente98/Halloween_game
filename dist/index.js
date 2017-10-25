@@ -52,6 +52,7 @@ function displayLetters() {
     td.each(function() {
         $(this).html('<h1>' + LETTERS[c] + '</h1>');
         c++;
+        $('#count').html('<h3> Moves: ' + count + '</h3');
     });
     if (LETTERS.join('') == 'HAPPYHALLOWEEN!') {
         $('table').html(
@@ -59,10 +60,11 @@ function displayLetters() {
         );
     }
 }
-
+var count = 0;
 function swap(x, arr) {
     arr.forEach(function(i) {
         if (LETTERS[i] == '') {
+            count += 1;
             LETTERS[i] = LETTERS[x];
             LETTERS[x] = '';
             displayLetters();
