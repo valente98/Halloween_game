@@ -15,15 +15,28 @@ body {
 
 table,
 td {
-    border: 1px solid orange;
+    border: 1px solid red;
+    background-color: orange;
     width: 500px;
     height: 150px;
 }
-
-.blue {
-    background-color: blue;
+h2 {
+    border: 1px solid red;
+    background-color: orange;
+    width: 400px;
+    height: 50px;
+    font-size: 4vh;
+    color: black;
+}
+h1 {
+    text-align: center;
+    color: black;
 }
 
-h1 {
-    color: white;
+.btn {
+    background-color: black;
+    color: orange;
+    height: 50px;
+    width: 75px;
+    font-size: 12px;
 }
